@@ -14,12 +14,12 @@ public class Petal : MonoBehaviour
 
     public void RightRotate()
     {
-        gameObject.transform.Rotate(Vector3.up, zAngle);
+        gameObject.transform.Rotate(Vector3.back * Time.deltaTime, zAngle);
     }
 
     public void LeftRotate()
     {
-        gameObject.transform.Rotate(Vector3.forward,zAngle);
+        gameObject.transform.Rotate(Vector3.back * Time.deltaTime, -zAngle);
     }
 
 }
