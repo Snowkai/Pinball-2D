@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7835893979453974800}
   - component: {fileID: 1063886868738746111}
   - component: {fileID: -6999557925133701287}
-  - component: {fileID: 8903826419303383353}
   - component: {fileID: -7604020638778061660}
+  - component: {fileID: 8903826419303383353}
   m_Layer: 0
   m_Name: Petal
   m_TagString: Untagged
@@ -127,19 +127,6 @@ PolygonCollider2D:
       - {x: 0.05399035, y: -0.45552433}
       - {x: 0.15026118, y: -0.070874125}
       - {x: 0.15653753, y: 0.014122188}
---- !u!114 &8903826419303383353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7770528540223465862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a988d81980dc6d74abf444be156e8cf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zAngle: 0
 --- !u!50 &-7604020638778061660
 Rigidbody2D:
   serializedVersion: 4
@@ -161,3 +148,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8903826419303383353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770528540223465862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a988d81980dc6d74abf444be156e8cf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zAngle: 0
