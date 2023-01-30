@@ -30,7 +30,7 @@ public class btn_Start : MonoBehaviour
         Debug.Log(dp);
         Debug.Log(bp);
         Debug.Log(result);
-        bd.AddForce(result * 1.5f, ForceMode2D.Impulse);
+        bd.AddForce(result * Random.Range(1.1f,1.3f), ForceMode2D.Impulse);
         gameObject.SetActive(false);
     }
 }
