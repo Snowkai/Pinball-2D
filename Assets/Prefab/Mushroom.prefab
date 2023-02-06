@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 495581814, guid: fbbd91e1e6865e3479774cadc3fa1f3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df6ea226651cbe84ea01851b4a170fe4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 8378301602485380509}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 88d8dc37fa75bc14f89227959a79b2bc, type: 2}
+  m_Material: {fileID: 6200000, guid: be138319080cf7949ade2398c94d0fef, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -119,7 +119,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 88d8dc37fa75bc14f89227959a79b2bc, type: 2}
+  m_Material: {fileID: 6200000, guid: be138319080cf7949ade2398c94d0fef, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -137,5 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8378301602485380483}
-  spriteblue: {fileID: 495581814, guid: fbbd91e1e6865e3479774cadc3fa1f3a, type: 3}
-  spritered: {fileID: -1391810999, guid: fbbd91e1e6865e3479774cadc3fa1f3a, type: 3}
+  spriteblue: {fileID: 21300000, guid: df6ea226651cbe84ea01851b4a170fe4, type: 3}
+  spritered: {fileID: 21300000, guid: d390a144e96dfc64ab546b5496af00aa, type: 3}
