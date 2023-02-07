@@ -11,8 +11,7 @@ public class HighScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;
-        scoretext.text = "TEST";
+        score = 0;       
     }
 
     // Update is called once per frame
@@ -23,7 +22,8 @@ public class HighScore : MonoBehaviour
     public void AddScore(int value)
     {
         score += value;
-        scoretext.text = score.ToString();
+        string str = score.ToString();
+        scoretext.text = str;
     }
     public void ResetScore()
     {

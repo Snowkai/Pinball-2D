@@ -138,8 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteblue: {fileID: 21300000, guid: df6ea226651cbe84ea01851b4a170fe4, type: 3}
   spritered: {fileID: 21300000, guid: d390a144e96dfc64ab546b5496af00aa, type: 3}
-  scorepoint: 100
-  mEvent:
+  OnEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8606581728157519110, guid: 73f2737d3848389479e3d74e86624fc6, type: 3}
