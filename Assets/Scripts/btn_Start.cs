@@ -27,9 +27,6 @@ public class btn_Start : MonoBehaviour
         Vector2 dp = directPush.GetComponent<Transform>().position;
         Vector2 bp = ball.GetComponent<Transform>().position;
         Vector2 result = dp -bp;
-        Debug.Log(dp);
-        Debug.Log(bp);
-        Debug.Log(result);
         bd.AddForce(result * Random.Range(1.1f,1.3f), ForceMode2D.Impulse);
         gameObject.SetActive(false);
     }

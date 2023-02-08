@@ -5,28 +5,28 @@ using UnityEngine;
 
 public class HighScore : MonoBehaviour
 {
-    private int score;
-    [SerializeField] private TextMeshProUGUI scoretext;
+    private int Score { get; set; }
+    private TextMeshProUGUI scoretext;
 
     // Start is called before the first frame update
     void Start()
-    {
-        score = 0;       
+    {   
+        scoretext= GetComponent<TextMeshProUGUI>();
+        ResetScore();
     }
-
     // Update is called once per frame
     void Update()
-    {
-
+    {       
     }
     public void AddScore(int value)
     {
-        score += value;
-        string str = score.ToString();
-        scoretext.text = str;
+        Score+= value;
+        scoretext.text = Score.ToString();
+        Debug.Log(scoretext.text);
     }
     public void ResetScore()
     {
-        score = 0;
+        Score = 0;
+        scoretext.text= Score.ToString();
     }
 }
