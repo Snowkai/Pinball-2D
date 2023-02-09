@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class HighScore : MonoBehaviour
 {
+    public int mushroom;
+    public int platform;
     private int Score { get; set; }
     private TextMeshProUGUI scoretext;
 

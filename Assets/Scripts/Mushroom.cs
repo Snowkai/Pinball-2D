@@ -7,8 +7,7 @@ public class Mushroom : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     public Sprite spriteblue;
-    public Sprite spritered;    
-    public UnityEvent OnEvent;
+    public Sprite spritered;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +24,7 @@ public class Mushroom : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         spriteRenderer.sprite = spritered;
-        OnEvent.Invoke();
+
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
