@@ -136,3 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbce2328c21cfac4cae59a7a89cf2248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mushroom: 2
+  platform: 1
