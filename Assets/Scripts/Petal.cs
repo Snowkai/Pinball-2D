@@ -4,34 +4,48 @@ using UnityEngine;
 
 public class Petal : MonoBehaviour
 {
-    public float zAngleRight;
-    public float zAngleLeft;
-    Rigidbody2D rb;
+    public float rightAngle;
+    public float leftAngle;
+    public float rotationSpeed;
+    public float startPosition;
+    private Vector3 currentEulerAngle;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            TurnLeft();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            StartPosition();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            TurnRight();
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            StartPosition();
+        }
+    }
+    public void TurnRight()
+    {
+        // currentEulerAngle = new Vector3(0, 0, rightAngle) * Time.deltaTime * rotationSpeed;
+        // transform.eulerAngles = currentEulerAngle;
+        transform.rotation = Quaternion.AngleAxis(rightAngle,Vector3.forward);
 
-    public void RightRotate()
-    {
-        rb.rotation = zAngleRight;
-        //gameObject.transform.Rotate(Vector3.back * Time.deltaTime, zAngle);
     }
-
-    public void RighttStart()
+    public void TurnLeft() 
     {
-        rb.rotation = -70f;
+        transform.rotation = Quaternion.AngleAxis(leftAngle, Vector3.forward);
     }
-
-    public void LeftRotate()
+    public void StartPosition() 
     {
-        rb.rotation = zAngleLeft;
-        //gameObject.transform.Rotate(Vector3.back * Time.deltaTime, -zAngle);
-    }
-    public void LeftStart()
-    {
-        rb.rotation = 70f;
+        transform.rotation = Quaternion.AngleAxis(startPosition, Vector3.forward);
     }
 }

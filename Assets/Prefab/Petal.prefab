@@ -161,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a988d81980dc6d74abf444be156e8cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zAngleRight: 0
-  zAngleLeft: 0
+  rightAngle: 0
+  leftAngle: 0
+  rotationSpeed: 1

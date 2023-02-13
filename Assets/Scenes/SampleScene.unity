@@ -571,8 +571,16 @@ PrefabInstance:
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
+      propertyPath: leftAngle
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
       propertyPath: zAngleLeft
       value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
+      propertyPath: startPosition
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
@@ -1530,7 +1538,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform  (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 978631724759090729, guid: 52df4995e706e684eb52280ef26c5d6b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52df4995e706e684eb52280ef26c5d6b, type: 3}
 --- !u!4 &1028708901 stripped
 Transform:
@@ -2597,7 +2606,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1181371948652701659}
           m_TargetAssemblyTypeName: Petal, Assembly-CSharp
-          m_MethodName: RightRotate
+          m_MethodName: TurnRight
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2613,7 +2622,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1181371948652701659}
           m_TargetAssemblyTypeName: Petal, Assembly-CSharp
-          m_MethodName: RighttStart
+          m_MethodName: StartPosition
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2914,7 +2923,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1580429414}
           m_TargetAssemblyTypeName: Petal, Assembly-CSharp
-          m_MethodName: LeftRotate
+          m_MethodName: TurnLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2930,7 +2939,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1580429414}
           m_TargetAssemblyTypeName: Petal, Assembly-CSharp
-          m_MethodName: LeftStart
+          m_MethodName: StartPosition
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3222,8 +3231,16 @@ PrefabInstance:
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
+      propertyPath: rightAngle
+      value: -115
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
       propertyPath: zAngleRight
       value: -115
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
+      propertyPath: startPosition
+      value: -70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
