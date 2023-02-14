@@ -3395,6 +3395,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 708778891}
     m_Modifications:
+    - target: {fileID: 4347387134072576595, guid: ad47e7a9dd64d9749887a30b00b41e2f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6169638609534676106, guid: ad47e7a9dd64d9749887a30b00b41e2f, type: 3}
       propertyPath: m_Name
       value: EndPlatform
@@ -3405,11 +3409,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6433397899691318708, guid: ad47e7a9dd64d9749887a30b00b41e2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.665469
+      value: -2.66
       objectReference: {fileID: 0}
     - target: {fileID: 6433397899691318708, guid: ad47e7a9dd64d9749887a30b00b41e2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.9115715
+      value: -8.832
       objectReference: {fileID: 0}
     - target: {fileID: 6433397899691318708, guid: ad47e7a9dd64d9749887a30b00b41e2f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3467,6 +3471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff886a5f8324b5d4596f85af205502f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btn_start: {fileID: 1654090912}
 --- !u!1001 &8378301601167983794
 PrefabInstance:
   m_ObjectHideFlags: 0

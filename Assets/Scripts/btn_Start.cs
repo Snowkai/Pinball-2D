@@ -30,4 +30,8 @@ public class btn_Start : MonoBehaviour
         bd.AddForce(result * Random.Range(1.1f,1.3f), ForceMode2D.Impulse);
         gameObject.SetActive(false);
     }
+    public void CreateBall()
+    {
+        ball = Instantiate(ball, position, rotation, parent);
+    }
 }
