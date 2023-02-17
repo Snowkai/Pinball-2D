@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Petal : MonoBehaviour
 {
-    public float rightAngle;
-    public float leftAngle;
+    public float rotateAngle;
     public float rotationSpeed;
-    public float startPosition;
     private Vector3 currentEulerAngle;
     private Quaternion startRotation;
 
@@ -37,14 +35,14 @@ public class Petal : MonoBehaviour
     }
     public void TurnRight()
     {
-        // currentEulerAngle = new Vector3(0, 0, rightAngle) * Time.deltaTime * rotationSpeed;
-        // transform.eulerAngles = currentEulerAngle;
-        transform.rotation = Quaternion.AngleAxis(rightAngle,Vector3.forward);
+        currentEulerAngle = new Vector3(0, 0, rotateAngle) * Time.deltaTime * rotationSpeed;
+        transform.eulerAngles = currentEulerAngle;
+        //transform.rotation = Quaternion.AngleAxis(rightAngle,Vector3.forward);
 
     }
     public void TurnLeft() 
     {
-        transform.rotation = Quaternion.AngleAxis(leftAngle, Vector3.forward);
+        transform.rotation = Quaternion.AngleAxis(rotateAngle, Vector3.forward);
     }
     public void StartPosition() 
     {
