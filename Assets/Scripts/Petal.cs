@@ -6,7 +6,6 @@ public class Petal : MonoBehaviour
 {
     public float rotateAngle;
     public float rotationSpeed;
-    private Vector3 currentEulerAngle;
     private Quaternion startRotation;
 
     // Start is called before the first frame update
@@ -35,14 +34,11 @@ public class Petal : MonoBehaviour
     }
     public void TurnRight()
     {
-        currentEulerAngle = new Vector3(0, 0, rotateAngle) * Time.deltaTime * rotationSpeed;
-        transform.eulerAngles = currentEulerAngle;
-        //transform.rotation = Quaternion.AngleAxis(rightAngle,Vector3.forward);
-
+        transform.rotation = Quaternion.Slerp(startRotation,Quaternion.Euler(0,0,rotateAngle),Time.deltaTime*rotationSpeed);
     }
     public void TurnLeft() 
     {
-        transform.rotation = Quaternion.AngleAxis(rotateAngle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(startRotation, Quaternion.Euler(0, 0, rotateAngle),Time.deltaTime * rotationSpeed);
     }
     public void StartPosition() 
     {
