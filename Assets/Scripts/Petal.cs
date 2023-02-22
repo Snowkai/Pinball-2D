@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Petal : MonoBehaviour
@@ -34,11 +35,15 @@ public class Petal : MonoBehaviour
     }
     public void TurnRight()
     {
-        transform.rotation = Quaternion.Slerp(startRotation,Quaternion.Euler(0,0,rotateAngle),Time.deltaTime*rotationSpeed);
+        Vector3 rotation = new Vector3(0,0,rotateAngle);
+        //transform.rotation = Quaternion.Euler(rotation);        
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), Time.deltaTime * rotationSpeed);
     }
     public void TurnLeft() 
     {
-        transform.rotation = Quaternion.Slerp(startRotation, Quaternion.Euler(0, 0, rotateAngle),Time.deltaTime * rotationSpeed);
+        Vector3 rotation = new Vector3(0, 0, rotateAngle);
+        //transform.rotation = Quaternion.Euler(rotation);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), Time.deltaTime* rotationSpeed);
     }
     public void StartPosition() 
     {
