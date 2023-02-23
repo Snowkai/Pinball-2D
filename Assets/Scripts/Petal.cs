@@ -36,14 +36,16 @@ public class Petal : MonoBehaviour
     public void TurnRight()
     {
         Vector3 rotation = new Vector3(0,0,rotateAngle);
-        //transform.rotation = Quaternion.Euler(rotation);        
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), Time.deltaTime * rotationSpeed);
+        //transform.rotation = Quaternion.Euler(rotation);
+        float timespeed = (transform.rotation.z - rotateAngle) / Time.deltaTime;
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), timespeed);
     }
     public void TurnLeft() 
     {
         Vector3 rotation = new Vector3(0, 0, rotateAngle);
         //transform.rotation = Quaternion.Euler(rotation);
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), Time.deltaTime* rotationSpeed);
+        float timespeed = (transform.rotation.z - rotateAngle) / Time.deltaTime;
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), timespeed);
     }
     public void StartPosition() 
     {
