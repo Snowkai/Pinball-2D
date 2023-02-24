@@ -195,6 +195,10 @@ PrefabInstance:
       value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
+      propertyPath: inTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
       propertyPath: rotateAngle
       value: -115
       objectReference: {fileID: 0}
@@ -1857,6 +1861,10 @@ PrefabInstance:
     - target: {fileID: 7835893979453974800, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
+      propertyPath: inTime
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 8903826419303383353, guid: 0b0af9f0cbd9d5741bd93a3ad45d7479, type: 3}
       propertyPath: rotateAngle

@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class Petal : MonoBehaviour
 {
     public float rotateAngle;
-    public float rotationSpeed;
+    public float speed;
     private Quaternion startRotation;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,20 +33,28 @@ public class Petal : MonoBehaviour
     }
     public void TurnRight()
     {
-        Vector3 rotation = new Vector3(0,0,rotateAngle);
-        //transform.rotation = Quaternion.Euler(rotation);
-        float timespeed = (transform.rotation.z - rotateAngle) / Time.deltaTime;
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), timespeed);
+        Vector3 rotation = new Vector3(0, 0, rotateAngle);
+        for (float wtime=0f; wtime < 1f;wtime = speed * Time.deltaTime )
+        {
+            transform.rotation = Quaternion.Lerp(startRotation, Quaternion.Euler(rotation), wtime);
+        }
+
     }
-    public void TurnLeft() 
+    public void TurnLeft()
     {
         Vector3 rotation = new Vector3(0, 0, rotateAngle);
-        //transform.rotation = Quaternion.Euler(rotation);
-        float timespeed = (transform.rotation.z - rotateAngle) / Time.deltaTime;
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), timespeed);
+        for (float wtime = 0f; wtime < 1f; wtime = speed * Time.deltaTime)
+        {
+            transform.rotation = Quaternion.Lerp(startRotation, Quaternion.Euler(rotation), wtime);
+        }
+
     }
-    public void StartPosition() 
+    public void StartPosition()
     {
-        transform.rotation = startRotation;
+       /*for (float wtime = 0f; wtime < 1f; wtime = speed * Time.deltaTime)
+        {
+            transform.rotation = Quaternion.Lerp(endRotation, startRotation, wtime);
+        }*/
+       transform.rotation= startRotation;
     }
 }

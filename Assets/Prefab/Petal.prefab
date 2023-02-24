@@ -158,4 +158,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateAngle: 0
-  rotationSpeed: 1
+  speed: 1
