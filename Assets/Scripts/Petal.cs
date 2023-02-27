@@ -1,11 +1,11 @@
+using System.Threading;
 using UnityEngine;
 
 public class Petal : MonoBehaviour
 {
-    public float rotateAngle;
-    public float speed;
-    private Quaternion startRotation;
-
+    public float angle;
+    public float speed = 0.01f;
+    Quaternion startRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -14,47 +14,23 @@ public class Petal : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            TurnLeft();
-        }
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            StartPosition();
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            TurnRight();
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            StartPosition();
-        }
-    }
-    public void TurnRight()
-    {
-        Vector3 rotation = new Vector3(0, 0, rotateAngle);
-        for (float wtime=0f; wtime < 1f;wtime = speed * Time.deltaTime )
-        {
-            transform.rotation = Quaternion.Lerp(startRotation, Quaternion.Euler(rotation), wtime);
-        }
 
     }
-    public void TurnLeft()
+    public void Turn()
     {
-        Vector3 rotation = new Vector3(0, 0, rotateAngle);
-        for (float wtime = 0f; wtime < 1f; wtime = speed * Time.deltaTime)
-        {
-            transform.rotation = Quaternion.Lerp(startRotation, Quaternion.Euler(rotation), wtime);
+        Vector3 euler = new Vector3(0,0,angle);
+        Quaternion endRotation = Quaternion.Euler(euler);
+        for (float w = 0f; w < 1; w = w + Time.deltaTime) {
+            transform.rotation = Quaternion.Lerp(startRotation, endRotation,w); 
         }
-
     }
     public void StartPosition()
     {
-       /*for (float wtime = 0f; wtime < 1f; wtime = speed * Time.deltaTime)
+        Vector3 euler = new Vector3(0, 0, angle);
+        Quaternion endRotation = Quaternion.Euler(euler);
+        for (float w = 1f; w > 0; w = w - Time.deltaTime)
         {
-            transform.rotation = Quaternion.Lerp(endRotation, startRotation, wtime);
-        }*/
-       transform.rotation= startRotation;
+            transform.rotation = Quaternion.Lerp(startRotation, endRotation, w);
+        }
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class btn_Start : MonoBehaviour
@@ -18,7 +16,7 @@ public class btn_Start : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StartAction()
@@ -26,8 +24,8 @@ public class btn_Start : MonoBehaviour
         Rigidbody2D bd = ball.GetComponent<Rigidbody2D>();
         Vector2 dp = directPush.GetComponent<Transform>().position;
         Vector2 bp = ball.GetComponent<Transform>().position;
-        Vector2 result = dp -bp;
-        bd.AddForce(result * Random.Range(1.1f,1.3f), ForceMode2D.Impulse);
+        Vector2 result = dp - bp;
+        bd.AddForce(result * Random.Range(1.1f, 1.3f), ForceMode2D.Impulse);
         gameObject.SetActive(false);
     }
     public void CreateBall()

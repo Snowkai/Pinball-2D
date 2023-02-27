@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class EndPlatform : MonoBehaviour
 {
     public GameObject btn_start;
     private btn_Start btnScript;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +14,7 @@ public class EndPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
