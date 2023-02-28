@@ -21,7 +21,7 @@ public class Petal : MonoBehaviour
         Vector3 euler = new Vector3(0,0,angle);
         Quaternion endRotation = Quaternion.Euler(euler);
         for (float w = 0f; w < 1; w = w + Time.deltaTime) {
-            transform.rotation = Quaternion.Lerp(startRotation, endRotation,w); 
+            transform.rotation = Quaternion.Lerp(startRotation, endRotation,w);
         }
     }
     public void StartPosition()
