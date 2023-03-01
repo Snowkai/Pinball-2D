@@ -4,13 +4,16 @@ public class Ball : MonoBehaviour
 {
     GameObject hg;
     HighScore score;
+    public Vector3 startPosition;
     public int mushroom;
     public int platform;
+    
     // Start is called before the first frame update
     void Start()
     {
         hg = GameObject.Find("HighScore");
         score = hg.GetComponent<HighScore>();
+        gameObject.transform.position = startPosition;
     }
 
     // Update is called once per frame
